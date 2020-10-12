@@ -3,7 +3,7 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 [![HitCount](http://hits.dwyl.com/Tekknow69/foobank-1.svg)](http://hits.dwyl.com/Tekknow69/foobank-1)
 
-# Facebook
+# foobank-1
 ### 17 group - foobank-1
 
 This project is for educational porpuses only. Pull request are welcome! Thank you for your cooperation!
