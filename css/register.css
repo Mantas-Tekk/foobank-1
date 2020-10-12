@@ -1,0 +1,72 @@
+.register {
+    /* background-color: purple; */
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+    .register .reg-toast {
+        margin: 10px;
+        color: #fff;
+        background-color: rgba(255, 0, 0, 0.308);
+        display: block;
+        width: 400px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px 0;
+        font-size: 18px;
+    }
+
+    .register h2 {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+    .register form {
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.473);
+        width: 400px;
+        display: flex;
+        align-items      : flex-start;
+        justify-content  : center;
+        flex-direction: column;
+    }
+
+        .register form input {
+            margin: 0 20px 0 20px;
+            width: calc(100% - 40px);
+            height: 25px;
+            font-size: 16px;
+            outline: none;
+            padding: 15px 5px;
+        }
+        .register form label {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 15px 20px 5px 20px;
+        }
+
+            .register form button {
+                display: flex;
+                justify-content: center;
+                border: none;
+                border: 1px solid rgb(13, 56, 92);
+                background-color: rgb(13, 56, 92);
+                font-size: 20px;
+                color: #fff;
+                margin: 20px 20px;
+                padding: 12px 20px;
+            } 
+            .register form button:hover {
+                background-color: rgb(94, 168, 230);
+                color: black;
+                border: 1px solid black;
+            }   
+
+            .register form button:active {
+                outline: none;
+            } 

@@ -1,0 +1,213 @@
+/* table {
+    background-color: rgba(240, 248, 255, 0.432);
+    margin: 20px;
+} */
+
+.toast {
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.50);
+  padding: 5px;
+  border-radius: 20px;
+  color:#fff;
+}
+
+  .toast > p {
+    text-align: center;
+  }
+
+.table-wrapper {
+    margin: 0 50px;
+    /* width: 70%; */
+    height: calc(100vh - 50px);
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+table.darkTable {
+    margin-top: 50px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border: 2px solid #000000;
+    background-color: #535353;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.darkTable td, table.darkTable th {
+    border: 1px solid #000000;
+    padding: 5px 2px;
+  }
+  table.darkTable tbody td {
+    font-size: 13px;
+    color: #E6E6E6;
+  }
+  table.darkTable tr:nth-child(even) {
+    background: #8B8B8B;
+  }
+  table.darkTable thead {
+    background: #000000;
+    border-bottom: 3px solid #000000;
+  }
+  table.darkTable thead th {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+  }
+  table.darkTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.darkTable tfoot td {
+    font-size: 12px;
+  }
+
+
+  .button {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      display: block;
+  }
+
+/* /////////////////// balance ////////////// */
+.container {
+  /* background-color: rgba(240, 255, 255, 0.377); */
+
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+  .container .info {
+    background-color: #535353;
+    margin: 20px;
+  }
+
+
+
+/* /////////////////// balance ////////////// */
+
+.container2 {
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.473);
+  padding: 20px;
+}
+.container2 input[type=text], select {
+  margin-top: 5px;
+  height: 25px;
+  padding: 15px 5px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+}
+.container2 input[type=text]:disabled::placeholder {
+  /* background-color: rgba(240, 255, 255, 0.377); */
+  height: 25px;
+  padding: 15px 5px;
+  font-size: 16px;
+  color: black;
+}
+.container2 input[type=text]:disabled {
+  background-color: transparent;
+  border: none;
+}
+
+.container2 label {
+  font-size: 18px;
+  font-weight: 700;
+
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.container2 button[type=submit] {
+  border: none;
+  border: 1px solid rgb(13, 56, 92);
+  background-color: rgb(13, 56, 92);
+  color: #fff;
+  font-size: 20px;
+
+  padding: 12px 20px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  float: right;
+}
+
+.container2 button[type=submit]:hover {
+  background-color: rgb(94, 168, 230);
+  color: black;
+  border: 1px solid black;
+}
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  /* margin-top: 6px; */
+}
+.col-25-b {
+  float: left;
+  width: 25%;
+  /* margin-top: 6px; */
+}
+.col-50 {
+  float: left;
+  width: 50%;
+  /* margin-top: 6px; */
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  /* margin-top: 6px; */
+}
+.col-100 {
+  float: left;
+  width: 100%;
+  /* margin-top: 6px; */
+}
+
+/* Clear floats after the columns */
+.container2 .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 880px) {
+  .container2 input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+  }
+  .col-25-b {
+    width: 25%;
+    /* margin-top: 10px; */
+  }
+  .col-75 {
+    width: 75%;
+    margin-top: 0;
+  }
+
+  .container2 button[type=submit] {
+    margin-top: 6px;
+    padding: 3px 10px;
+  }
+
+  .container2 {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container2 {
+    width: 450px;
+  }
+}
