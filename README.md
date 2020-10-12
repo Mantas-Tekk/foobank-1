@@ -8,7 +8,7 @@
 
 This project is for educational porpuses only. Pull request are welcome! Thank you for your cooperation!
 
-Site published at https://tekknow69.github.io/foobank-1/
+Site published at https://foob4nk.000webhostapp.com/register
 
 ### Authors
 [Mantas](https://github.com/Tekknow69)
