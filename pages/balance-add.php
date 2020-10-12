@@ -67,12 +67,13 @@ if (isset($_POST['b_a'])) {
 if (isset($_POST['b_s'])) {
     $money = $_POST['money'];
     //_c($_POST['money']); 
-
+    // _c($money);
     if(validSum($money)) {
+        // _c($money);
 
-        if ($money > 0 && $money < $user['balance']) {
-
-            if (($money < $user['balance'])) {
+        if ($money >= 0 && $money <= $user['balance']) {
+            _c($money);
+            if ($money <= $user['balance']) {
                 $user['balance'] -= $money;
                 $user['balance'] = number_format($user['balance'],2,".","");
             }
@@ -89,8 +90,10 @@ if (isset($_POST['b_s'])) {
                     $db1[] = $user;
                 }
             }
+
             file_put_contents('db.json', json_encode($db1));
-            header('Location: '.INSTALL_DIR.'balance-add');
+            //header('Location: '.INSTALL_DIR.'balance-add');
+
         } else {
             $toast_html = '
             <div class="toast">

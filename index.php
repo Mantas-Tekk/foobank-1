@@ -48,17 +48,20 @@ $route = str_replace(INSTALL_DIR, '', $_SERVER['REQUEST_URI']);
 
 
   <?php
-  if(''==$route || 'index' == $route) {
-    require __DIR__ . './pages/register.php';
+  if( '' == $route ) {
+    require __DIR__ . '/pages/register.php';
+  }
+  if('index' == $route ) {
+    require __DIR__ . '/pages/register.php';
   }
   if ('register' == $route) {
-    require __DIR__ . './pages/register.php';
+    require __DIR__ . '/pages/register.php';
   }
   if ('accounts' == $route) {
-    require __DIR__ . './pages/accounts.php';
+    require __DIR__ . '/pages/accounts.php';
   }
   if ('balance-add' == $route) {
-    require __DIR__ . './pages/balance-add.php';
+    require __DIR__ . '/pages/balance-add.php';
   }
   ?>
 </body>
