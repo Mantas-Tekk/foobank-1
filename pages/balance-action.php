@@ -1,8 +1,8 @@
 <?php
 
 require FUNCTION_DIR . '/functions/iban.php';
-$db = json_decode(file_get_contents(__DIR__.'/../db.json'), 1);
 
+$db = json_decode(file_get_contents(__DIR__.'/../db.json'), 1);
 
 $user = '';
 $button_value = '';
@@ -29,7 +29,7 @@ if (isset($_SESSION['substract'])) {
     $button_name = 'Atimti';
 }
 
-// _c($_SESSION);
+// var_dump($_SESSION);
 // _c($user);
 $db1 = [];
 
@@ -46,7 +46,6 @@ if (isset($_POST['b_a'])) {
                 if ($value['id'] == $_SESSION['id']) {
                     $is_in_list = true;
                 }
-    
                 if (!$is_in_list) {
                     $db1[] = $value;
                 } else {
@@ -54,11 +53,11 @@ if (isset($_POST['b_a'])) {
                 }
             }
             file_put_contents('db.json', json_encode($db1));
-            header('Location: '.INSTALL_DIR.'balance-add');
+            header('Location: '.INSTALL_DIR.'balance-action');
         }
     } else {
         $toast_html = '
-        <div class="toast">
+        <div class="toast1">
             <p>Lievas formatas</p>
         </div>';
     }
@@ -66,13 +65,14 @@ if (isset($_POST['b_a'])) {
 
 if (isset($_POST['b_s'])) {
     $money = $_POST['money'];
-    //_c($_POST['money']); 
-
+    // _c($_POST['money']); 
+    // _c($money);
     if(validSum($money)) {
+        // _c($money);
 
-        if ($money > 0 && $money < $user['balance']) {
-
-            if (($money < $user['balance'])) {
+        if ($money >= 0 && $money <= $user['balance']) {
+            // _c($money);
+            if ($money <= $user['balance']) {
                 $user['balance'] -= $money;
                 $user['balance'] = number_format($user['balance'],2,".","");
             }
@@ -89,47 +89,28 @@ if (isset($_POST['b_s'])) {
                     $db1[] = $user;
                 }
             }
+
             file_put_contents('db.json', json_encode($db1));
-            header('Location: '.INSTALL_DIR.'balance-add');
+            header('Location: '.INSTALL_DIR.'balance-action');
+
         } else {
             $toast_html = '
-            <div class="toast">
+            <div class="toast1">
                 <p>Nera tiek pinigu saskaitoje</p>
             </div>';
         }
     } else {
         $toast_html = '
-        <div class="toast">
+        <div class="toast1">
             <p>Lievas formatas</p>
         </div>';
     }
 }
 
 ?>
-
 <div class="container">
-
-    <!-- <div class="info">
-        <p>First name: <?= $user['name'] ?></p>
-        <p>Last name: <?= $user['lastname'] ?></p>
-        <p>Balance: <?= $user['balance'] ?> $</p>
-
-
-    </div>
-
-    <form action="" method="post">
-
-        <label for="money"><?= $button_name ?> some money</label>
-        <input type="text" name="money" id="money" required>
-
-        <button type="submit" name="<?= $button_value ?>"><?= $button_name ?></button>
-
-    </form> -->
-
-<?= $toast_html?>
-
-
-    <div class="container2">
+    <?= $toast_html?>
+   <div class="container2">
         <form action="" method="post">
             <div class="row">
                 <div class="col-25">

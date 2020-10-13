@@ -25,7 +25,6 @@
         text-align: center;
     }
 
-
     .register form {
         height: 400px;
         background-color: rgba(255, 255, 255, 0.473);
@@ -49,10 +48,11 @@
             font-weight: 700;
             margin: 15px 20px 5px 20px;
         }
+            .register form .reg-button-wrapp {
+                width: 100%;
+            }
 
             .register form button {
-                display: flex;
-                justify-content: center;
                 border: none;
                 border: 1px solid rgb(13, 56, 92);
                 background-color: rgb(13, 56, 92);
@@ -60,6 +60,7 @@
                 color: #fff;
                 margin: 20px 20px;
                 padding: 12px 20px;
+                float: right;
             } 
             .register form button:hover {
                 background-color: rgb(94, 168, 230);

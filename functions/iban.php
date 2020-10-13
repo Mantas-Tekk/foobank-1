@@ -1,5 +1,12 @@
 <?php
 
+// Defining console log function
+// if (function_exists('_c')) {
+//   } else {
+//     function _c() {}
+//   }
+
+
 //LT12 1000 0111 0100 1000
 function GenerateIban()
 {
@@ -7,43 +14,6 @@ function GenerateIban()
     $iban .= '' . rand(100, 999) . ' ' . rand(1000, 9999) . ' ' . rand(1000, 9999);
     return $iban;
 }
-
-// function validatePersonNumber($number)
-// {
-//     $is_valid = true;
-
-
-//     if (strlen($number . '') != 11) {
-//         $is_valid = false;
-//         return $is_valid;
-//     }
-
-//     if (!is_numeric($number)) {
-//         $is_valid = false;
-//         return $is_valid;
-//     }
-
-//     //First digit
-//     if (!((substr($number . '', 0, 1) > 0) && (substr($number . '', 0, 1) < 7))) {
-//         $is_valid = false;
-//         return $is_valid;
-//     }
-
-//     $year = substr($number . '', 1, 2);
-//     $month = substr($number . '', 3, 2);
-//     $day = substr($number . '', 5, 2);
-//     $year = $year > 30 ? '19' . $year : '20' . $year;
-//     _c($year);
-//     _c($month);
-//     _c($day);
-
-//     if (!checkdate($month, $day, $year)) {
-//         $is_valid = false;
-//         return $is_valid;
-//     }
-
-//     return $is_valid;
-// }
 
 function validatePersonNumber($s)
 {
@@ -76,7 +46,7 @@ function validatePersonNumber($s)
 
 function uniquePersonalNumber($number) {
 
-    $db = json_decode(file_get_contents('http://localhost/project_01/uzd-bank/bank-1/db.json'), 1);
+    $db = json_decode(file_get_contents(__DIR__.'/../db.json'), 1);
     // _c($db);
 
 

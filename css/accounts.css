@@ -11,12 +11,24 @@
   border-radius: 20px;
   color:#fff;
 }
+.toast1 {
+  margin-top: 20px;
+  width: 450px;
+  background-color: rgba(255, 0, 0, 0.50);
+  padding: 5px;
+  border-radius: 20px;
+  color:#fff;
+}
 
   .toast > p {
     text-align: center;
   }
+  .toast1 > p {
+    text-align: center;
+  }
 
 .table-wrapper {
+    position: relative;
     margin: 0 50px;
     /* width: 70%; */
     height: calc(100vh - 50px);
@@ -29,8 +41,8 @@
 table.darkTable {
     margin-top: 50px;
     font-family: "Arial Black", Gadget, sans-serif;
-    border: 2px solid #000000;
-    background-color: #535353;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.473);
     width: 100%;
     height: 50px;
     text-align: left;
@@ -38,14 +50,15 @@ table.darkTable {
   }
   table.darkTable td, table.darkTable th {
     border: 1px solid #000000;
-    padding: 5px 2px;
+    padding: 5px 5px;
+    margin-left: 5px;
   }
   table.darkTable tbody td {
     font-size: 13px;
-    color: #E6E6E6;
+    color: black;
   }
   table.darkTable tr:nth-child(even) {
-    background: #8B8B8B;
+    background: rgba(202, 202, 202, 0.473);
   }
   table.darkTable thead {
     background: #000000;
@@ -147,6 +160,64 @@ table.darkTable {
   border: 1px solid black;
 }
 
+.table-wrapper > .non-sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: azure;
+
+}
+.table-wrapper > .sticky {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  height: 50px;
+}
+
+#navbar button {
+  border: none;
+  border: 1px solid rgb(13, 56, 92);
+  background-color: rgb(13, 56, 92);
+  font-size: 20px;
+  color: #fff;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  /* float: right; */
+} 
+#navbar button:hover {
+  background-color: rgb(94, 168, 230);
+  color: black;
+  border: 1px solid black;
+}   
+
+#navbar button:active {
+  outline: none;
+} 
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+
 
 .col-25 {
   float: left;
@@ -205,9 +276,27 @@ table.darkTable {
   .container2 {
     width: 70%;
   }
+  .toast1 {
+    width: 70%;
+  }
+
+  .table-wrapper {
+    margin: 0 10px;
+  }
+
 }
 @media screen and (min-width: 1000px) {
   .container2 {
     width: 450px;
   }
+
+  .toast1 {
+    width: 450px;
+  }
+
+  .table-wrapper {
+    margin: 0 15%;
+  }
+   
+  
 }

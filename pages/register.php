@@ -16,7 +16,7 @@ if(isset($_POST['register'])) {
 
     if($is_person_valid) {
 
-        $db = json_decode(file_get_contents('http://localhost/project_01/uzd-bank/bank-1/db.json'), 1);
+        $db = json_decode(file_get_contents(__DIR__.'/../db.json'), 1);
         
         $_POST['iban'] = GenerateIban();
     
@@ -61,7 +61,6 @@ function validation($a) {
         setError($error);
         return false;
     }
-
     return true;
 }
 
@@ -76,15 +75,17 @@ $html = '
         <h2>Registracijos forma</h2>
 
         <label for="name">Vardas</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" >
 
         <label for="lastname">Pavarde</label>
-        <input type="text" name="lastname" required>
+        <input type="text" name="lastname" >
         
         <label for="personalcode">Asmens kodas</label>
-        <input type="text" name="personalnumber" required>
+        <input type="text" name="personalnumber">
 
-        <button type="submit" name="register">Registruotis</button>
+        <div class="reg-button-wrapp">
+            <button type="submit" name="register">Registruotis</button>
+        </div>
     </form>
 </div>';
 
