@@ -8,7 +8,7 @@
 
 This project is for educational porpuses only. Pull request are welcome! Thank you for your cooperation!
 
-Site published at https://foob4nk.000webhostapp.com/register
+Site published at https://foob4nkk.000webhostapp.com/register
 
 ### Authors
 [Mantas](https://github.com/Tekknow69)
